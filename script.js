@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // Render Work Rows
+  
   const workList = document.getElementById('workList');
   workList.innerHTML = projects.map((p, idx) => `
     <div class="work-row hover-target" onclick="openCase(${idx})">
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `).join('');
 
-  // Custom Magnetic Cursor
+  
   const cursor = document.getElementById('cursorRing');
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
   });
 
-  // Case Drawer
+  
   window.openCase = (idx) => {
     const p = projects[idx];
     document.getElementById('caseBody').innerHTML = `
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('caseModal').classList.remove('open');
   });
 
-  // Capabilities Accordion
+  
   const acc = document.getElementById('capAccordion');
   acc.innerHTML = capabilities.map((c, i) => `
     <div class="acc-item ${i === 0 ? 'open' : ''}">
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Testimonial Slider
+  
   let qIndex = 0;
   function updateQuote() {
     document.getElementById('quoteText').textContent = testimonials[qIndex].quote;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateQuote();
   });
 
-  // Budget Chips & Inquiry Validation
+  
   let selectedBudget = '$15k–$30k';
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
