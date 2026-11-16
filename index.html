@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURORA® — Digital Product & Brand Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom Magnetic Cursor -->
+  <div class="cursor-ring" id="cursorRing"><span>VIEW</span></div>
+
+  <header class="studio-header">
+    <a href="#" class="studio-mark">AURORA®</a>
+    <nav class="studio-nav">
+      <a href="#work">Selected Work (04)</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#studio">Practice</a>
+      <a href="#inquire">Start a Project</a>
+      <a href="[YOUR PORTFOLIO URL]" target="_blank" rel="noopener" class="nav-dev-link">Developer Portfolio →</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Kinetic Hero -->
+    <section class="hero-stage">
+      <div class="hero-meta-row">
+        <span>INDEPENDENT DESIGN &amp; ENGINEERING PRACTICE</span>
+        <span>BAKU / ZÜRICH / REMOTE — EST. 2022</span>
+      </div>
+      <h1 class="hero-headline">
+        WE ARCHITECT <span class="italic-serif">unignorable</span> DIGITAL PRODUCTS.
+      </h1>
+      <div class="hero-bottom">
+        <p>
+          Partnering with ambitious founders to craft flagship web experiences, design systems, and kinetic brand identities.
+        </p>
+        <a href="#work" class="btn-vermilion">Explore Archive ↓</a>
+      </div>
+    </section>
+
+    <!-- Interactive Selected Works Index -->
+    <section id="work" class="section-block">
+      <div class="section-head">
+        <span class="index-num">01 / ARCHIVE</span>
+        <h2>Selected Case Studies</h2>
+      </div>
+
+      <div class="work-list" id="workList"></div>
+    </section>
+
+    <!-- Capabilities Accordion -->
+    <section id="capabilities" class="section-block">
+      <div class="section-head">
+        <span class="index-num">02 / DISCIPLINES</span>
+        <h2>Core Capabilities</h2>
+      </div>
+      <div class="accordion-list" id="capAccordion"></div>
+    </section>
+
+    <!-- Team & Client Endorsements -->
+    <section id="studio" class="section-block two-col-studio">
+      <div>
+        <span class="index-num">03 / LEADERSHIP</span>
+        <h2>Principal Direction</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <span class="role-tag">LEAD FRONTEND ARCHITECT</span>
+            <h3>Jamal Aliyev</h3>
+            <p>Interactive systems, WebGL/CSS choreography, and design engineering.</p>
+          </div>
+          <div class="team-card">
+            <span class="role-tag">CREATIVE DIRECTOR</span>
+            <h3>Elena Rostova</h3>
+            <p>Editorial typography, brand architecture, and art direction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-panel">
+        <span class="index-num">CLIENT ENDORSEMENT</span>
+        <blockquote id="quoteText">
+          “Aurora transformed our complex infrastructure platform into an interface that feels effortless and authoritative.”
+        </blockquote>
+        <div class="quote-author" id="quoteAuthor">— Marcus Vance, VP Product at Kinetix</div>
+        <div class="quote-controls">
+          <button id="prevQuote">← Prev</button>
+          <button id="nextQuote">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Inquiry Form -->
+    <section id="inquire" class="section-block inquiry-section">
+      <div>
+        <span class="index-num">04 / COMMISSION</span>
+        <h2 class="inquiry-title">Have a flagship product in mind?</h2>
+        <p style="color:var(--muted);max-width:40ch;">We take on two commissioned engagements per quarter. Send your brief for a technical &amp; design review.</p>
+      </div>
+
+      <form id="inquiryForm" class="inquiry-form">
+        <div class="form-row">
+          <input type="text" id="clientName" required placeholder="Your Name *" />
+          <input type="email" id="clientEmail" required placeholder="Work Email *" />
+        </div>
+        <div class="budget-chips" id="budgetChips">
+          <button type="button" class="chip active" data-budget="$15k–$30k">$15k–$30k</button>
+          <button type="button" class="chip" data-budget="$30k–$60k">$30k–$60k</button>
+          <button type="button" class="chip" data-budget="$60k+">$60k+</button>
+        </div>
+        <textarea id="clientBrief" rows="4" required placeholder="Tell us about timeline, product goals, and scope..."></textarea>
+        <button type="submit" class="btn-vermilion">Transmit Brief →</button>
+        <p class="form-feedback" id="formFeedback"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="studio-footer">
+    <div>© 2026 AURORA STUDIO — ALL RIGHTS RESERVED</div>
+    <div>Designed &amp; Developed by <a href="[YOUR PORTFOLIO URL]" target="_blank" rel="noopener">Jamal Aliyev</a></div>
+  </footer>
+
+  <!-- Case Study Drawer -->
+  <div class="case-overlay" id="caseModal">
+    <div class="case-sheet">
+      <button class="close-case" id="closeCaseBtn">Close Case [ESC]</button>
+      <div id="caseBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
